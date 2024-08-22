@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <h1>Países em condições</h1>
+    <p>Em que país você nasceu?<br> <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="Confirmar()"></p>
+    <div id="p"></div>
+    <script>
+        function Confirmar (){
+            var pais = document.querySelector('input#txtp').value
+            var p = document.querySelector('div#p')
+            
+            if (pais == 'Brasil'){
+                p.innerHTML = `<p>Você nasceu no ${pais}, então vc é um brasileiro!</p>`
+            } else{
+                p.innerHTML = `Já que você nasceu em ${pais} você é um estrangeiro.`
+            }
+        }
+    </script>
+</body>
+</html>
